@@ -4,8 +4,8 @@ import psycopg2
 from psycopg2 import sql
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
-from src.company import Company
 from config import config
+from src.company import Company
 from src.db_manager import DBManager
 from src.hh_api import HeadHunterAPI
 from src.vacancy import Vacancy
