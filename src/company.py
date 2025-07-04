@@ -12,18 +12,16 @@ class Company:
         self.url = url
 
     def to_db_tuple(self) -> Tuple[str, str, Optional[str], Optional[str]]:
-        """Возвращает данные компании в виде кортежа для вставки в базу данных."""
+        """Возвращает данные компании в виде кортежа для вставки в базу данных"""
 
         return (self.company_id, self.name, self.area, self.url)
 
     @classmethod
     def from_api_data(cls, data: dict) -> "Company":
         """
-        Создаёт объект Company из данных, полученных из API.
-
-        :param data: Словарь с данными компании в формате API
-        :return: Экземпляр класса Company, заполненный данными из словаря
+        Создаёт объект Company из данных, полученных из API
         """
+
         area_name = data.get("area", {}).get("name") if data.get("area") else None
         return cls(
             company_id=data.get("id", ""),

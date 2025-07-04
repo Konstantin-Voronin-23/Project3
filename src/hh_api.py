@@ -40,7 +40,7 @@ class HeadHunterAPI(AbstractAPI):
         self.__session: Optional[requests.Session] = requests.Session()
 
     def _connect(self) -> None:
-        """Проверка доступности API вакансий."""
+        """Проверка доступности API вакансий"""
 
         if self.__session is None:
             raise ConnectionError("Сессия не инициализирована")

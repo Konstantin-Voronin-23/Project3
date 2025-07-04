@@ -132,7 +132,7 @@ class DBManager:
         return []
 
     def get_all_vacancies(self) -> List[str]:
-        """Возвращает список всех вакансий с деталями в человекочитаемом формате"""
+        """Возвращает список всех вакансий с деталями понятными для пользователя словами"""
 
         self.connect()
         if self.conn is not None:
